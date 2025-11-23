@@ -1,0 +1,247 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: linear-gradient(135deg, white, black);
+}
+
+.piano {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: .2px solid white;
+    border-radius: 15px;
+    background-color: black;
+    padding: 30px;
+    box-shadow: 10px 10px 10px -5px black;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.information {
+    background-color: white;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    flex-direction: column;
+    border-radius: 15px 15px 0px 0px;
+    width: 1146px;
+    height: 100px;
+}
+
+.title {
+    text-shadow: 3px 3px 3px grey;
+}
+
+.information .phone {
+    font-size: 1rem;
+    display: none;
+    text-shadow: 1px 1px 1px black;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.upper {
+    position: relative;
+    top: 0px;
+}
+
+.upper-part-one {
+    left: 75px;
+}
+
+.upper-part-two {
+    left: 317px;
+}
+
+.upper-part-three {
+    left: 645px;
+}
+
+.upper-part-four {
+    left: 890px;
+}
+
+.two {
+    margin-left: 83px;
+}
+
+.three {
+    margin-left: 164px;
+}
+
+.piano-button {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    text-align: center;
+    background-color: white;
+    width: 80px;
+    height: 240px;
+    position: relative;
+    transition: all .4s ease;
+    cursor: pointer;
+    box-shadow: 7px 7px 7px grey;
+    margin: 0px 1px;
+    z-index: 0;
+}
+
+.piano-button:hover,
+.active {
+    background-color: rgb(150, 150, 150);
+    transform: translateY(4px);
+    box-shadow: none;
+    scale: 0.99;
+    top: 0px;
+}
+
+.upper-button {
+    background-color: black;
+    position: absolute;
+    width: 50px;
+    height: 110px;
+    left: -12.5px;
+    top: 0;
+    cursor: pointer;
+    z-index: 1;
+    color: white;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    text-align: center;
+    transition: all .4s ease;
+}
+
+.upper-button:hover,
+.upper-active {
+    background-color: rgb(60, 60, 60);
+    box-shadow: 2px 2px 2px rgb(93, 93, 93);
+    top: -1px;
+    scale: 0.99;
+}
+
+@media (min-width: 601px) and (max-width: 1024px) {
+    .upper-part-one {
+        left: 43px;
+    }
+
+    .upper-part-two {
+        left: 168.5px;
+    }
+
+    .upper-part-three {
+        left: 337px;
+    }
+
+    .upper-part-four {
+        left: 462.5px;
+    }
+
+    .two {
+        margin-left: 42.5px;
+    }
+
+    .three {
+        margin-left: 84px;
+    }
+
+    .piano {
+        padding: 20px;
+    }
+
+    .information {
+        width: 586.9px;
+        height: 100px;
+        font-size: 3rem;
+    }
+
+    .piano-button {
+        width: 40px;
+        height: 120px;
+        box-shadow: 5px 5px 5px rgb(95, 95, 95);
+        font-size: 10px;
+    }
+
+    .upper-button {
+        width: 25px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 600px) {
+    body {
+        padding: 5px;
+    }
+
+    .piano {
+        padding: 10px;
+    }
+
+    .information {
+        width: 90%;
+        height: 60px;
+        font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+
+    .buttons {
+        transform: scale(0.9);
+        transform-origin: top center;
+    }
+
+    .piano-button {
+        width: 28px;
+        height: 90px;
+        margin: 0 1px;
+        box-shadow: 3px 3px 3px rgb(95, 95, 95);
+    }
+
+    .upper-button {
+        width: 18px;
+        height: 45px;
+        left: -9px;
+    }
+
+    .upper-part-one {
+        left: 30px;
+    }
+
+    .upper-part-two {
+        left: 120px;
+    }
+
+    .upper-part-three {
+        left: 240px;
+    }
+
+    .upper-part-four {
+        left: 330px;
+    }
+
+    .two {
+        margin-left: 30px;
+    }
+
+    .three {
+        margin-left: 60px;
+    }
+}
+
+@media (max-width: 450px) {
+    .information .phone {
+        display: inline;
+    }
+}
