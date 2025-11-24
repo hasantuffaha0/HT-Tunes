@@ -4,8 +4,43 @@
     box-sizing: border-box;
 }
 
+:root {
+    /* body */
+    --BODY-PADDING: 20px;
+    /* upper-part-one */
+    --LEFT-UPPER-PART-ONE: 75px;
+    /* upper-part-two */
+    --LEFT-UPPER-PART-TWO: 317px;
+    /* upper-part-three */
+    --LEFT-UPPER-PART-THREE: 645px;
+    /* upper-part-four */
+    --LEFT-UPPER-PART-FOUR: 890px;
+    /* two */
+    --MARGIN-LEFT-TWO: 83px;
+    /* three */
+    --MARGIN-LEFT-THREE: 164px;
+    /* piano */
+    --PIANO-PADDING: 30px;
+    /* information */
+    --INFO-WIDTH: 1146px;
+    --INFO-HIGHT: 100px;
+    --INFO-FONT-SIZE: 3rem;
+    --MARGIN-INFO-BOTTON: 5px;
+    /* piano-button */
+    --PIANO-WIDTH: 80px;
+    --PIANO-HEIGHT: 240px;
+    --PIANO-SHADOW: 7px 7px 7px grey;
+    --PIANO-FONT-SIZE: 1rem;
+    /* upper-button */
+    --UPPER-WIDTH: 50px;
+    --UPPER-HIGHT: 110px;
+    --UPPER-LEFT: -12.5px;
+    /* .information .phone */
+    --INFO-PHONE-DISPLAY: none;
+}
+
 body {
-    padding: 20px;
+    padding: var(--BODY-PADDING);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -21,22 +56,22 @@ body {
     border: .2px solid white;
     border-radius: 15px;
     background-color: black;
-    padding: 30px;
+    padding: var(--PIANO-PADDING);
     box-shadow: 10px 10px 10px -5px black;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 .information {
     background-color: white;
-    margin-bottom: 5px;
+    margin-bottom: var(--MARGIN-INFO-BOTTON);
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 3rem;
+    font-size: var(--INFO-FONT-SIZE);
     flex-direction: column;
     border-radius: 15px 15px 0px 0px;
-    width: 1146px;
-    height: 100px;
+    width: var(--INFO-WIDTH);
+    height: var(--INFO-HIGHT);
 }
 
 .title {
@@ -45,7 +80,7 @@ body {
 
 .information .phone {
     font-size: 1rem;
-    display: none;
+    display: var(--INFO-PHONE-DISPLAY);
     text-shadow: 1px 1px 1px black;
 }
 
@@ -60,27 +95,27 @@ body {
 }
 
 .upper-part-one {
-    left: 75px;
+    left: var(--LEFT-UPPER-PART-ONE);
 }
 
 .upper-part-two {
-    left: 317px;
+    left: var(--LEFT-UPPER-PART-TWO);
 }
 
 .upper-part-three {
-    left: 645px;
+    left: var(--LEFT-UPPER-PART-THREE);
 }
 
 .upper-part-four {
-    left: 890px;
+    left: var(--LEFT-UPPER-PART-FOUR);
 }
 
 .two {
-    margin-left: 83px;
+    margin-left: var(--MARGIN-LEFT-TWO);
 }
 
 .three {
-    margin-left: 164px;
+    margin-left: var(--MARGIN-LEFT-THREE);
 }
 
 .piano-button {
@@ -89,14 +124,23 @@ body {
     justify-content: center;
     text-align: center;
     background-color: white;
-    width: 80px;
-    height: 240px;
+    width: var(--PIANO-WIDTH);
+    height: var(--PIANO-HEIGHT);
+    font-size: var(--PIANO-FONT-SIZE);
     position: relative;
     transition: all .4s ease;
     cursor: pointer;
-    box-shadow: 7px 7px 7px grey;
+    box-shadow: var(--PIANO-SHADOW);
     margin: 0px 1px;
     z-index: 0;
+}
+
+.piano-button:last-child {
+    border-radius: 0px 0px 6px 0px ;
+}
+
+.do {
+    border-radius: 0px 0px 0px 6px;
 }
 
 .piano-button:hover,
@@ -111,9 +155,9 @@ body {
 .upper-button {
     background-color: black;
     position: absolute;
-    width: 50px;
-    height: 110px;
-    left: -12.5px;
+    width: var(--UPPER-WIDTH);
+    height: var(--UPPER-HIGHT);
+    left: var(--UPPER-LEFT);
     top: 0;
     cursor: pointer;
     z-index: 1;
@@ -134,114 +178,54 @@ body {
 }
 
 @media (min-width: 601px) and (max-width: 1024px) {
-    .upper-part-one {
-        left: 43px;
-    }
-
-    .upper-part-two {
-        left: 168.5px;
-    }
-
-    .upper-part-three {
-        left: 337px;
-    }
-
-    .upper-part-four {
-        left: 462.5px;
-    }
-
-    .two {
-        margin-left: 42.5px;
-    }
-
-    .three {
-        margin-left: 84px;
-    }
-
-    .piano {
-        padding: 20px;
-    }
-
-    .information {
-        width: 586.9px;
-        height: 100px;
-        font-size: 3rem;
-    }
-
-    .piano-button {
-        width: 40px;
-        height: 120px;
-        box-shadow: 5px 5px 5px rgb(95, 95, 95);
-        font-size: 10px;
-    }
-
-    .upper-button {
-        width: 25px;
-        height: 55px;
+    :root {
+        --LEFT-UPPER-PART-ONE: 43px;
+        --LEFT-UPPER-PART-TWO: 168.5px;
+        --LEFT-UPPER-PART-THREE: 337px;
+        --LEFT-UPPER-PART-FOUR: 462.5px;
+        --MARGIN-LEFT-TWO: 42.5px;
+        --MARGIN-LEFT-THREE: 84px;
+        --PIANO-PADDING: 20px;
+        --INFO-WIDTH: 586.9px;
+        --PIANO-WIDTH: 40px;
+        --PIANO-HEIGHT: 120px;
+        --PIANO-SHADOW: 5px 5px 5px rgb(95, 95, 95);
+        --PIANO-FONT-SIZE: 10px;
+        --UPPER-WIDTH: 25px;
+        --UPPER-HIGHT: 55px;
     }
 }
 
 @media (max-width: 600px) {
-    body {
-        padding: 5px;
-    }
-
-    .piano {
-        padding: 10px;
-    }
-
-    .information {
-        width: 90%;
-        height: 60px;
-        font-size: 1.6rem;
-        margin-bottom: 10px;
+    :root {
+        --LEFT-UPPER-PART-ONE: 30px;
+        --LEFT-UPPER-PART-TWO: 120px;
+        --LEFT-UPPER-PART-THREE: 240px;
+        --LEFT-UPPER-PART-FOUR: 330px;
+        --MARGIN-LEFT-TWO: 30px;
+        --MARGIN-LEFT-THREE: 60px;
+        --PIANO-PADDING: 10px;
+        --INFO-WIDTH: 90%;
+        --INFO-HIGHT: 60px;
+        --INFO-FONT-SIZE: 1.6rem;
+        --MARGIN-INFO-BOTTON: 10px;
+        --PIANO-WIDTH: 28px;
+        --PIANO-HEIGHT: 90px;
+        --PIANO-SHADOW: 3px 3px 3px rgb(95, 95, 95);
+        --UPPER-WIDTH: 18px;
+        --UPPER-HIGHT: 45px;
+        --UPPER-LEFT: -9px;
+        --BODY-PADDING: 5px;
     }
 
     .buttons {
         transform: scale(0.9);
         transform-origin: top center;
     }
-
-    .piano-button {
-        width: 28px;
-        height: 90px;
-        margin: 0 1px;
-        box-shadow: 3px 3px 3px rgb(95, 95, 95);
-    }
-
-    .upper-button {
-        width: 18px;
-        height: 45px;
-        left: -9px;
-    }
-
-    .upper-part-one {
-        left: 30px;
-    }
-
-    .upper-part-two {
-        left: 120px;
-    }
-
-    .upper-part-three {
-        left: 240px;
-    }
-
-    .upper-part-four {
-        left: 330px;
-    }
-
-    .two {
-        margin-left: 30px;
-    }
-
-    .three {
-        margin-left: 60px;
-    }
 }
 
 @media (max-width: 450px) {
-    .information .phone {
-        display: inline;
+    :root {
+        --INFO-PHONE-DISPLAY: inline;
     }
 }
